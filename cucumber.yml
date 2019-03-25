@@ -1,0 +1,32 @@
+<%
+  time = Time.now.strftime('%Y%m%d_%H%M%S')
+  FileUtils.mkdir_p('reports/html') unless Dir.exist?('reports/html')
+  FileUtils.mkdir_p('reports/json') unless Dir.exist?('reports/json')
+  FileUtils.mkdir_p('reports/parallel/html') unless Dir.exist?('reports/parallel/html')
+  FileUtils.mkdir_p('reports/parallel/json') unless Dir.exist?('reports/parallel/json')
+%>
+
+### Reports ###
+html_report: --no-source --color -f pretty -f html -o reports/html/html_report_<%= time %>.html
+json_report: --no-source --color -f pretty -f json -o reports/json/json_report_<%= time %>.json
+
+### Reports Parallel Testing ###
+parallel_html: --no-source --color -f pretty -f html -o reports/parallel/html/html_parallel<%= ENV['TEST_ENV_NUMBER'] %>_<%= time %>.html
+parallel_json: --no-source --color -f pretty -f json -o reports/parallel/json/json_parallel<%= ENV['TEST_ENV_NUMBER'] %>_<%= time %>.json
+
+### Ambientes ###
+dev: AMBIENTE=dev -t 'not @ignoreDev'
+hlg: AMBIENTE=hlg -t 'not @ignoreHlg'
+stg: AMBIENTE=stg -t 'not @ignoreStg'
+prd: AMBIENTE=prd -t 'not @ignorePrd'
+
+### Bandeiras ###
+ex: BANDEIRA=extra -t 'not @ignoreExtra'
+pf: BANDEIRA=pontofrio -t 'not @ignorePontoFrio'
+cb: BANDEIRA=casasbahia -t 'not @ignoreCasasBahia'
+hp: BANDEIRA=hp -t 'not @ignoreHp'
+bt: BANDEIRA=barateiro -t 'not @ignoreBarateiro'
+aoc: BANDEIRA=aoc -t 'not @ignoreAoc'
+
+### Habilitar logs ###
+log: SAVON_LOG=true

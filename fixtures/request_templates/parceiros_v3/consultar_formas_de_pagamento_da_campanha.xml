@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:gpa="http://schemas.datacontract.org/2004/07/Gpa.Comercio.Servicos.Contracts.DTO.B2B">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <tem:ConsultarFormasDePagamentoDaCampanha>
+      <tem:dadosConsultarFormasPagamento>
+        <gpa:CNPJ><%= dados['cnpj'] %></gpa:CNPJ>
+        <gpa:IdCampanha><%= dados['id_campanha'] %></gpa:IdCampanha>
+      </tem:dadosConsultarFormasPagamento>
+    </tem:ConsultarFormasDePagamentoDaCampanha>
+  </soapenv:Body>
+</soapenv:Envelope>

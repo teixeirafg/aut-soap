@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:con="ConfirmarPedido">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <tem:ConfirmarPedido>
+      <tem:pedido>
+        <con:Confirmado><%= dados['confirmado'] %></con:Confirmado>
+        <con:IdCampanha><%= dados['id_campanha'] %></con:IdCampanha>
+        <con:IdCompra><%= dados['id_compra'] %></con:IdCompra>
+        <con:IdPedidoParceiro><%= dados['id_pedido_parceiro'] %></con:IdPedidoParceiro>
+      </tem:pedido>
+    </tem:ConfirmarPedido>
+  </soapenv:Body>
+</soapenv:Envelope>

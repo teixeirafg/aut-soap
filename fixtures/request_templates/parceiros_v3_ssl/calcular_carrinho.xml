@@ -1,0 +1,23 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/" xmlns:gpa="http://schemas.datacontract.org/2004/07/Gpa.Comercio.Servicos.Contracts.DTO">
+    <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing"><wsa:Action><%= dados['wsa_action'] %></wsa:Action><wsa:To><%= dados['wsa_to'] %></wsa:To></soap:Header>
+    <soap:Body>
+        <tem:CalcularCarrinho>
+            <tem:carrinho>
+                <gpa:CEP><%= dados['cep'] %></gpa:CEP>
+                <gpa:CNPJ><%= dados['cnpj'] %></gpa:CNPJ>
+                <gpa:IdCampanha><%= dados['id_campanha'] %></gpa:IdCampanha>
+                <gpa:Produtos>
+                  <% dados['lista_produtos'].each do |item| %>
+                    <gpa:DadosListaProdutoCarrinhoDTO>
+                      <gpa:Codigo><%= item['produto']['codigo_produto'] %></gpa:Codigo>
+                      <% if item['produto'].has_key?('id_lojista') %>
+                      <gpa:IdLojista><%= item['produto']['id_lojista'] %></gpa:IdLojista>
+                      <% end %>
+                      <gpa:Quantidade><%= item['produto']['quantidade'] %></gpa:Quantidade>
+                    </gpa:DadosListaProdutoCarrinhoDTO>
+                  <% end %>
+                </gpa:Produtos>
+            </tem:carrinho>
+        </tem:CalcularCarrinho>
+    </soap:Body>
+</soap:Envelope>

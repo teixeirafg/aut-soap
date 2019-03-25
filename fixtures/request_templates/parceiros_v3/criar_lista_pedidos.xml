@@ -1,0 +1,45 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:gpa="Gpa.B2B" xmlns:dad="DadosPedidoB2B">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <tem:CriarListaPedidos>
+      <tem:pedidos>
+        <gpa:DadosPedidoB2BDTO>
+          <gpa:Administrador><%= dados['administrador'] %></gpa:Administrador>
+          <gpa:CNPJ><%= dados['cnpj'] %></gpa:CNPJ>
+          <gpa:Campanha><%= dados['campanha'] %></gpa:Campanha>
+          <gpa:Destinatario>
+            <dad:CpfCnpj><%= dados['cpfcnpj'] %></dad:CpfCnpj>
+            <dad:Email><%= dados['email'] %></dad:Email>
+            <dad:InscricaoEstadual><%= dados['inscricao_estadual'] %></dad:InscricaoEstadual>
+            <dad:Nome><%= dados['nome'] %></dad:Nome>
+          </gpa:Destinatario>
+          <gpa:EnderecoEntrega>
+            <dad:Bairro><%= dados['bairro'] %></dad:Bairro>
+            <dad:CEP><%= dados['cep'] %></dad:CEP>
+            <dad:Cidade><%= dados['cidade'] %></dad:Cidade>
+            <dad:Complemento><%= dados['complemento'] %></dad:Complemento>
+            <dad:Estado><%= dados['estado'] %></dad:Estado>
+            <dad:Logradouro><%= dados['logradouro'] %>o</dad:Logradouro>
+            <dad:Numero><%= dados['numero'] %></dad:Numero>
+            <dad:Referencia><%= dados['referencia'] %></dad:Referencia>
+            <dad:Telefone><%= dados['telefone'] %>></dad:Telefone>
+            <dad:Telefone2><%= dados['telefone2'] %></dad:Telefone2>
+          </gpa:EnderecoEntrega>
+          <gpa:PedidoParceiro><%= dados['pedido_parceiro'] %></gpa:PedidoParceiro>
+          <gpa:Produtos>
+            <% dados['lista_produtos'].each do |item| %>
+            <dad:ProdutoDadosPedidoB2B>
+              <dad:Codigo><%= item['produto']['codigo'] %></dad:Codigo>
+              <% if item['produto'].has_key?('preco_venda') %>
+              <dad:PrecoVenda><%= item['produto']['preco_venda'] %></dad:PrecoVenda>
+              <% end %>
+              <dad:Quantidade><%= item['produto']['quantidade'] %></dad:Quantidade>
+            </dad:ProdutoDadosPedidoB2B>
+            <% end %>
+          </gpa:Produtos>
+          <gpa:ValorFrete>9.12</gpa:ValorFrete>
+        </gpa:DadosPedidoB2BDTO>
+      </tem:pedidos>
+    </tem:CriarListaPedidos>
+  </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,32 @@
+health_check:
+  administrador: '4639'
+  cnpj: '11.094.546/0001-75'
+  campanha: '2155'
+  cpfcnpj: '05.054.878/0009-80'
+  email: '5drzi8h8@gmail.com'
+  inscricao_estadual: 'isento'
+  nome: 'Willians Silva'
+  bairro: 'Engenho Novo'
+  cep: '06415-130'
+  cidade: 'Barueri'
+  complemento: 'CASA'
+  estado: 'SP'
+  logradouro: 'Marechal Deodoro'
+  numero: '506'
+  referencia: 'Maternal'
+  telefone: '11982699739'
+  telefone2: '1145529734'
+  pedido_parceiro: '3013122'
+  lista_produtos: [
+    produto: {
+      codigo: '720596',
+      preco_venda: '65.90',
+      quantidade: '1'
+    },
+    produto: {
+      codigo: '1893695',
+      preco_venda: '65.90',
+      quantidade: '1'
+    }
+  ]
+  valor_frete: '9.12'

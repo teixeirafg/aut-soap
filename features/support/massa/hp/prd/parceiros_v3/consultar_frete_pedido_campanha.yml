@@ -1,0 +1,13 @@
+health_check:
+  cep: '09520-010'
+  id_campanha: '38'
+  lista_produtos: [
+    produto: {
+      codigo_produto: '25125',
+      quantidade: '1'
+    },
+    produto: {
+      codigo_produto: '3551589',
+      quantidade: '4'
+    }
+  ]

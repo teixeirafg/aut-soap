@@ -1,0 +1,36 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="Gpa.B2B" xmlns:ns2="DadosPedidoB2B" xmlns:ns3="http://tempuri.org/">
+  <SOAP-ENV:Body>
+    <ns3:CriarPedido>
+      <ns3:pedido>
+        <ns1:CNPJ><%= dados['cnpj'] %></ns1:CNPJ>
+        <ns1:Campanha><%= dados['campanha'] %></ns1:Campanha>
+        <ns1:Destinatario>
+          <ns2:CpfCnpj><%= dados['cpfcnpj'] %></ns2:CpfCnpj>
+          <ns2:Email><%= dados['email'] %></ns2:Email>
+          <ns2:InscricaoEstadual><%= dados['inscricao_estadual'] %></ns2:InscricaoEstadual>
+          <ns2:Nome><%= dados['nome'] %></ns2:Nome>
+        </ns1:Destinatario>
+        <ns1:EnderecoEntrega>
+          <ns2:Bairro><%= dados['bairro'] %></ns2:Bairro>
+          <ns2:CEP><%= dados['cep'] %></ns2:CEP>
+          <ns2:Cidade><%= dados['cidade'] %></ns2:Cidade>
+          <ns2:Complemento><%= dados['complemento'] %></ns2:Complemento>
+          <ns2:Estado><%= dados['estado'] %></ns2:Estado>
+          <ns2:Logradouro><%= dados['logradouro'] %></ns2:Logradouro>
+          <ns2:Numero><%= dados['numero'] %></ns2:Numero>
+          <ns2:Referencia><%= dados['referencia'] %></ns2:Referencia>
+          <ns2:Telefone><%= dados['telefone'] %></ns2:Telefone>
+        </ns1:EnderecoEntrega>
+        <ns1:PedidoParceiro><%= dados['pedido_parceiro'] %></ns1:PedidoParceiro>
+        <ns1:Produtos>
+          <ns2:ProdutoDadosPedidoB2B>
+            <ns2:Codigo><%= dados['codigo'] %></ns2:Codigo>
+            <ns2:PrecoVenda><%= dados['preco_venda'] %></ns2:PrecoVenda>
+            <ns2:Quantidade><%= dados['quantidade'] %></ns2:Quantidade>
+          </ns2:ProdutoDadosPedidoB2B>
+        </ns1:Produtos>
+        <ns1:ValorFrete><%= dados['valor_frete'] %></ns1:ValorFrete>
+      </ns3:pedido>
+    </ns3:CriarPedido>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

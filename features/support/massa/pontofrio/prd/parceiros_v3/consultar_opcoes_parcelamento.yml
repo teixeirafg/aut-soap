@@ -1,0 +1,5 @@
+health_check:
+  cnpj: '61.198.164/0001-60'
+  id_campanha: '3221'
+  id_forma_pagamento: '1'
+  valor_a_parcelar: '100'

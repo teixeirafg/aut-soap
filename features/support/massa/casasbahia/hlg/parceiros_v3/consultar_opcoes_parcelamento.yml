@@ -1,0 +1,5 @@
+health_check:
+  cnpj: '11.094.546/0001-75'
+  id_campanha: '337'
+  id_forma_pagamento: '1'
+  valor_a_parcelar: '100'

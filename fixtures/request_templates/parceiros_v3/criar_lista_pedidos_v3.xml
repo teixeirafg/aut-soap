@@ -1,0 +1,54 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:gpa="http://schemas.datacontract.org/2004/07/Gpa.Comercio.Servicos.Contracts.DTO.B2B" xmlns:gpa1="Gpa.B2B" xmlns:dad="DadosPedidoB2B">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <tem:CriarListaPedidosV3>
+      <tem:dadosListaPedidos>
+        <gpa:AceitarPrecoInformadoPeloUsuario><%= dados['preco_usuario'] %></gpa:AceitarPrecoInformadoPeloUsuario>
+        <gpa:IdAdministrador><%= dados['id_administrador'] %></gpa:IdAdministrador>
+        <gpa:ImportacaoSpot><%= dados['importacao_spot'] %></gpa:ImportacaoSpot>
+        <gpa:Pedidos>
+          <gpa1:DadosPedidoB2BDTO>
+            <gpa1:Administrador><%= dados['administrador'] %></gpa1:Administrador>
+            <gpa1:AguardarConfirmacao><%= dados['aguardando_confirmacao'] %></gpa1:AguardarConfirmacao>
+            <gpa1:CNPJ><%= dados['cnpj'] %></gpa1:CNPJ>
+            <gpa1:Campanha><%= dados['campanha'] %></gpa1:Campanha>
+            <gpa1:Destinatario>
+              <dad:CpfCnpj><%= dados['cpfcnpj'] %></dad:CpfCnpj>
+              <dad:Email><%= dados['email'] %></dad:Email>
+              <dad:InscricaoEstadual><%= dados['inscricao_estadual'] %></dad:InscricaoEstadual>
+              <dad:Nome><%= dados['nome'] %></dad:Nome>
+            </gpa1:Destinatario>
+            <gpa1:EnderecoEntrega>
+              <dad:Bairro><%= dados['bairro'] %></dad:Bairro>
+              <dad:CEP><%= dados['cep'] %></dad:CEP>
+              <dad:Cidade><%= dados['cidade'] %></dad:Cidade>
+              <dad:Complemento><%= dados['complemento'] %></dad:Complemento>
+              <dad:Estado><%= dados['estado'] %></dad:Estado>
+              <dad:Logradouro><%= dados['logradouro'] %></dad:Logradouro>
+              <dad:Numero><%= dados['numero'] %></dad:Numero>
+              <dad:Referencia><%= dados['referencia'] %></dad:Referencia>
+              <dad:Telefone><%= dados['telefone'] %></dad:Telefone>
+              <dad:Telefone2><%= dados['telefon2'] %></dad:Telefone2>
+            </gpa1:EnderecoEntrega>
+            <gpa1:OptantePeloSimples><%= dados['optante_pelo_simples'] %></gpa1:OptantePeloSimples>
+            <gpa1:ParametrosExtras><%= dados['parametros_extra'] %></gpa1:ParametrosExtras>
+            <gpa1:PedidoParceiro><%= dados['pedido_parceiro'] %></gpa1:PedidoParceiro>
+            <gpa1:Produtos>
+              <% dados['lista_produtos'].each do |item| %>
+              <dad:ProdutoDadosPedidoB2B>
+                <dad:Codigo><%= item['produto']['codigo'] %></dad:Codigo>
+                <% if item['produto'].has_key?('preco_venda') %>
+                <dad:PrecoVenda><%= item['produto']['preco_venda'] %></dad:PrecoVenda>
+                <% end %>
+                <dad:Quantidade><%= item['produto']['quantidade'] %></dad:Quantidade>
+              </dad:ProdutoDadosPedidoB2B>
+              <% end %>
+            </gpa1:Produtos>
+            <gpa1:ValorFrete><%= dados['valor_frete'] %></gpa1:ValorFrete>
+          </gpa1:DadosPedidoB2BDTO>
+        </gpa:Pedidos>
+        <gpa:UtilizaDadosCep><%= dados['utiliza_dados_cep'] %></gpa:UtilizaDadosCep>
+      </tem:dadosListaPedidos>
+    </tem:CriarListaPedidosV3>
+  </soapenv:Body>
+</soapenv:Envelope>

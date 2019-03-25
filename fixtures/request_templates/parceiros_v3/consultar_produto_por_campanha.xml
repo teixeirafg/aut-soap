@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:gpa="Gpa.B2B">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <tem:ConsultarProdutoPorCampanha>
+      <tem:produtoCampanha>
+        <gpa:CNPJ><%= dados['cnpj'] %></gpa:CNPJ>
+        <gpa:IdCampanha><%= dados['id_campanha'] %></gpa:IdCampanha>
+        <gpa:IdSku><%= dados['id_sku'] %></gpa:IdSku>
+      </tem:produtoCampanha>
+    </tem:ConsultarProdutoPorCampanha>
+  </soapenv:Body>
+</soapenv:Envelope>

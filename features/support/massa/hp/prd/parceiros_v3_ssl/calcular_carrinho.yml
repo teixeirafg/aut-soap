@@ -1,0 +1,418 @@
+health_check:
+  cep: '09520-010'
+  cnpj: '57.822.975/0001-12'
+  id_campanha: 28
+  lista_produtos: [
+    produto: {
+      codigo_produto: 13864300,
+      quantidade: 1
+    }
+  ]
+
+
+beneficio_catalogo:
+  dados_padrao:
+    id_campanha: 28
+
+  nao_concede_beneficios:
+    produto:
+      lista_produtos: [
+        produto: {
+          codigo_produto: 5696030,
+          quantidade: 1
+        }
+      ]
+
+  sem_alteracao_preco:
+    cep: '09520-010'
+    cnpj: '57.822.975/0001-12'
+    id_campanha: 27
+    lista_produtos: [
+      produto: {
+        codigo_produto: 13864300,
+        quantidade: 1
+      }
+    ]
+    lista_beneficios: [
+      beneficio: {
+        tipo_beneficio: desconto,
+        beneficio_em: porcentagem,
+        valor: 0
+      }
+    ]
+
+  desconto:
+    categoria:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 43
+        lista_produtos: [
+          produto: {
+            codigo_produto: 14498839,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: desconto,
+            beneficio_em: porcentagem,
+            valor: 3
+          }
+        ]
+    marca:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 44
+        lista_produtos: [
+          produto: {
+            codigo_produto: 5104,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: desconto,
+            beneficio_em: porcentagem,
+            valor: 9
+          }
+        ]
+    produto:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 45
+        lista_produtos: [
+          produto: {
+            codigo_produto: 14204845,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: desconto,
+            beneficio_em: porcentagem,
+            valor: 12
+          }
+        ]
+
+  indisponibilidade:
+    categoria:
+      cep: '09520-010'
+      cnpj: '57.822.975/0001-12'
+      id_campanha: 46
+      lista_produtos: [
+        produto: {
+          codigo_produto: 14498839,
+          quantidade: 1
+        }
+      ]
+    marca:
+      cep: '09520-010'
+      cnpj: '57.822.975/0001-12'
+      id_campanha: 47
+      lista_produtos: [
+        produto: {
+          codigo_produto: 5104,
+          quantidade: 1
+        }
+      ]
+    produto:
+      cep: '09520-010'
+      cnpj: '57.822.975/0001-12'
+      id_campanha: 48
+      lista_produtos: [
+        produto: {
+          codigo_produto: 14204845,
+          quantidade: 1
+        }
+      ]
+
+  acrescimo:
+    categoria:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 39
+        lista_produtos: [
+          produto: {
+            codigo_produto: 14498839,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: acrescimo,
+            beneficio_em: porcentagem,
+            valor: 17
+          }
+        ]
+    marca:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 41
+        lista_produtos: [
+          produto: {
+            codigo_produto: 5104,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: acrescimo,
+            beneficio_em: porcentagem,
+            valor: 21
+          }
+        ]
+    produto:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 42
+        lista_produtos: [
+          produto: {
+            codigo_produto: 14204845,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: acrescimo,
+            beneficio_em: porcentagem,
+            valor: 33
+          }
+        ]
+
+  mais_de_um_beneficio:
+    cep: '09520-010'
+    cnpj: '57.822.975/0001-12'
+    id_campanha: 49
+    lista_produtos: [
+      produto: {
+        codigo_produto: 5696030,
+        quantidade: 1
+      }
+    ]
+    lista_beneficios: [
+      beneficio: {
+        tipo_beneficio: desconto,
+        beneficio_em: porcentagem,
+        valor: 13
+      },
+      beneficio: {
+        tipo_beneficio: acrescimo,
+        beneficio_em: porcentagem,
+        valor: 9
+      }
+    ]
+
+
+beneficio_frete:
+  dados_padrao:
+    id_campanha: 28
+
+  nao_concede_beneficios:
+    categoria:
+      lista_produtos: [
+        produto: {
+          codigo_produto: 11686395,
+          quantidade: 1
+        }
+      ]
+    marca:
+      lista_produtos: [
+        produto: {
+          codigo_produto: 14204845,
+          quantidade: 1
+        }
+      ]
+    produto:
+      lista_produtos: [
+        produto: {
+          codigo_produto: 5696030,
+          quantidade: 1
+        }
+      ]
+    valor_maior_igual:
+      lista_produtos: [
+        produto: {
+          codigo_produto: 5696030,
+          quantidade: 1
+        }
+      ]
+
+  acrescimo:
+    regiao:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 29
+        lista_produtos: [
+          produto: {
+            codigo_produto: 13864300,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: acrescimo,
+            beneficio_em: porcentagem,
+            valor: 30
+          }
+        ]
+    categoria:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 30
+        lista_produtos: [
+          produto: {
+            codigo_produto: 13864300,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: acrescimo,
+            beneficio_em: porcentagem,
+            valor: 35
+          }
+        ]
+    marca:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 31
+        lista_produtos: [
+          produto: {
+            codigo_produto: 13864300,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: acrescimo,
+            beneficio_em: porcentagem,
+            valor: 40
+          }
+        ]
+    produto:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 32
+        lista_produtos: [
+          produto: {
+            codigo_produto: 14204845,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: acrescimo,
+            beneficio_em: porcentagem,
+            valor: 18
+          }
+        ]
+
+  valor_fixo:
+    regiao:
+      cep: '09520-010'
+      cnpj: '57.822.975/0001-12'
+      tipo_beneficio: fixo
+      id_campanha: 33
+      lista_produtos: [
+        produto: {
+          codigo_produto: 14204845,
+          quantidade: 1
+        }
+      ]
+      valor_cadastrado: 17.55
+
+  valor_minimo:
+    produto:
+      cep: '09520-010'
+      cnpj: '57.822.975/0001-12'
+      tipo_beneficio: mínimo
+      id_campanha: 34
+      lista_produtos: [
+        produto: {
+          codigo_produto: 14204845,
+          quantidade: 1
+        }
+      ]
+      valor_cadastrado: 5432.00
+
+  valor_maximo:
+    produto:
+      cep: '09520-010'
+      cnpj: '57.822.975/0001-12'
+      tipo_beneficio: máximo
+      id_campanha: 35
+      lista_produtos: [
+        produto: {
+          codigo_produto: 14204845,
+          quantidade: 1
+        }
+      ]
+      valor_cadastrado: 1.50
+
+  regra:
+    valor_maior_igual:
+      desconto:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 36
+        lista_produtos: [
+          produto: {
+            codigo_produto: 14204845,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: desconto,
+            beneficio_em: porcentagem,
+            valor: 50
+          }
+        ]
+
+  frete_gratis:
+    cidade:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 38
+        lista_produtos: [
+          produto: {
+            codigo_produto: 14204845,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: desconto,
+            beneficio_em: porcentagem,
+            valor: 100
+          }
+        ]
+    categoria:
+      porcentagem:
+        cep: '09520-010'
+        cnpj: '57.822.975/0001-12'
+        id_campanha: 37
+        lista_produtos: [
+          produto: {
+            codigo_produto: 14204845,
+            quantidade: 1
+          }
+        ]
+        lista_beneficios: [
+          beneficio: {
+            tipo_beneficio: desconto,
+            beneficio_em: porcentagem,
+            valor: 100
+          }
+        ]

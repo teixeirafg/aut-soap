@@ -1,0 +1,20 @@
+hlg:
+  parceiros_v3:
+    wsdl: http://b2b-servico-barateiro.hlg-b2b.net/ParceirosV3.svc?wsdl=wsdl0
+    endpoint: http://b2b-servico-barateiro.hlg-b2b.net/Parceirosv3.svc
+  parceiros_v3_ssl:
+    wsdl: https://b2b-servico-barateiro.hlg-b2b.net/secure/ParceirosV3SSL.svc?wsdl
+
+stg:
+  parceiros_v3:
+    wsdl: http://b2b-servico-barateiro.stage-b2b.net/Parceirosv3.svc?wsdl=wsdl0
+    endpoint: http://b2b-servico-barateiro.stage-b2b.net/Parceirosv3.svc
+  parceiros_v3_ssl:
+    wsdl: https://b2b-servico-barateiro.stage-b2b.net/secure/ParceirosV3SSL.svc?wsdl
+
+prd:
+  parceiros_v3:
+    wsdl: http://b2b.barateiro.com.br/ParceirosV3.svc?wsdl=wsdl0
+    endpoint: http://b2b.barateiro.com.br/Parceirosv3.svc
+  parceiros_v3_ssl:
+    wsdl: https://b2b.barateiro.com.br/secure/Parceirosv3SSL.svc?wsdl

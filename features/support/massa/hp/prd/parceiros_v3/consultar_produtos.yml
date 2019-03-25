@@ -1,0 +1,12 @@
+health_check:
+  lista_produtos: [
+    produto: {
+      codigo_produto: '25125'
+    },
+    produto: {
+      codigo_produto: '3551589'
+    },
+    produto: {
+      codigo_produto: '26285'
+    }
+  ]

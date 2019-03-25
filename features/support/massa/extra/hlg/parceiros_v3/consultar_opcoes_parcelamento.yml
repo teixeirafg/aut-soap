@@ -1,0 +1,5 @@
+health_check:
+  cnpj: '06.236.935/0001-58'
+  id_campanha: '2220'
+  id_forma_pagamento: '1'
+  valor_a_parcelar: '100'

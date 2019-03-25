@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ConsultarProdutos>
+        <% dados['lista_produtos'].each do |item| %>
+         <tem:idSkus>
+            <arr:int><%= item['produto']['codigo_produto'] %></arr:int>
+         </tem:idSkus>
+         <% end %>
+      </tem:ConsultarProdutos>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,18 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:gpa="Gpa.B2B" xmlns:dad="DadosPedidoB2B">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <tem:ConfirmarReserva>
+      <tem:confirmacao>
+        <gpa:Confirmado><%= dados['confirmado'] %></gpa:Confirmado>
+        <gpa:Destinatario>
+          <dad:CpfCnpj><%= dados['cnpj'] %></dad:CpfCnpj>
+          <dad:Email><%= dados['email'] %></dad:Email>
+          <dad:Nome><%= dados['nome'] %></dad:Nome>
+        </gpa:Destinatario>
+        <gpa:IdCampanha><%= dados['id_campanha'] %></gpa:IdCampanha>
+        <gpa:IdCompra><%= dados['id_compra'] %></gpa:IdCompra>
+        <gpa:IdPedidoParceiro><%= dados['id_pedido_parceiro'] %></gpa:IdPedidoParceiro>
+      </tem:confirmacao>
+    </tem:ConfirmarReserva>
+  </soapenv:Body>
+</soapenv:Envelope>

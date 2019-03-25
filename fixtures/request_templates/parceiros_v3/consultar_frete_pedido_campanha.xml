@@ -1,0 +1,19 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:gpa="Gpa.B2B" xmlns:dad="DadosConsultarFretePedido">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <tem:ConsultarFretePedidoCampanha>
+      <tem:pedido>
+        <gpa:CEP><%= dados['cep'] %></gpa:CEP>
+        <gpa:IdCampanha><%= dados['id_campanha'] %></gpa:IdCampanha>
+        <gpa:Produtos>
+          <% dados['lista_produtos'].each do |item| %>
+          <dad:ProdutoDadosConsultarFretePedidoDTO>
+            <dad:Codigo><%= item['produto']['codigo_produto'] %></dad:Codigo>
+            <dad:Quantidade><%= item['produto']['quantidade'] %></dad:Quantidade>
+          </dad:ProdutoDadosConsultarFretePedidoDTO>
+          <% end %>
+        </gpa:Produtos>
+      </tem:pedido>
+    </tem:ConsultarFretePedidoCampanha>
+  </soapenv:Body>
+</soapenv:Envelope>

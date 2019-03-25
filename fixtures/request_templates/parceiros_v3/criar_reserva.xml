@@ -1,0 +1,33 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:gpa="http://schemas.datacontract.org/2004/07/Gpa.Comercio.Servicos.Contracts.DTO.B2B" xmlns:gpa1="Gpa.B2B" xmlns:dad="DadosPedidoB2B">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <tem:CriarReserva>
+      <tem:reserva>
+        <gpa:Reserva>
+          <gpa1:CNPJ><%= dados['cnpj'] %></gpa1:CNPJ>
+          <gpa1:Campanha><%= dados['campanha'] %></gpa1:Campanha>
+          <gpa1:EnderecoEntrega>
+            <dad:Bairro><%= dados['bairro'] %></dad:Bairro>
+            <dad:CEP><%= dados['cep'] %></dad:CEP>
+            <dad:Cidade><%= dados['cidade'] %></dad:Cidade>
+            <dad:Complemento><%= dados['complemento'] %></dad:Complemento>
+            <dad:Estado><%= dados['estado'] %></dad:Estado>
+            <dad:Logradouro><%= dados['logradouro'] %></dad:Logradouro>
+            <dad:Numero><%= dados['numero'] %></dad:Numero>
+            <dad:Referencia><%= dados['referencia'] %></dad:Referencia>
+            <dad:Telefone><%= dados['telefone'] %></dad:Telefone>
+          </gpa1:EnderecoEntrega>
+          <gpa1:PedidoParceiro><%= dados['pedido_parceiro'] %></gpa1:PedidoParceiro>
+          <gpa1:Produtos>
+            <dad:ProdutoDadosPedidoB2B>
+              <dad:Codigo><%= dados['codigo'] %></dad:Codigo>
+              <dad:PrecoVenda><%= dados['preco_venda'] %></dad:PrecoVenda>
+              <dad:Quantidade><%= dados['quantidade'] %></dad:Quantidade>
+            </dad:ProdutoDadosPedidoB2B>
+          </gpa1:Produtos>
+          <gpa1:ValorFrete><%= dados['valor_frete'] %></gpa1:ValorFrete>
+        </gpa:Reserva>
+      </tem:reserva>
+    </tem:CriarReserva>
+  </soapenv:Body>
+</soapenv:Envelope>

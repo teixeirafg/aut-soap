@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <tem:ConsultarPedidoParceiro>
+      <tem:idCampanha><%= dados['id_campanha'] %></tem:idCampanha>
+      <tem:idPedidoParceiro><%= dados['id_pedido_parceiro'] %></tem:idPedidoParceiro>
+    </tem:ConsultarPedidoParceiro>
+  </soapenv:Body>
+</soapenv:Envelope>

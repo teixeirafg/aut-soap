@@ -1,0 +1,10 @@
+health_check:
+  cep: '09520-010'
+  cnpj: '57.822.975/0001-12'
+  id_campanha: 38
+  lista_produtos: [
+    produto: {
+      codigo_produto: 25125,
+      quantidade: 1
+    }
+  ]

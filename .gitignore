@@ -1,0 +1,8 @@
+*.json
+*.html
+debug.log
+/.idea/
+/.idea
+\.idea
+reports/
+Gemfile.lock
