@@ -1,20 +1,20 @@
 hlg:
   parceiros_v3:
-    wsdl: http://b2b-servico-casasbahia.hlg-b2b.net/Parceirosv3.svc?wsdl=wsdl0
-    endpoint: http://b2b-servico-casasbahia.hlg-b2b.net/Parceirosv3.svc
+    wsdl:
+    endpoint:
   parceiros_v3_ssl:
-    wsdl: https://b2b-servico-casasbahia.hlg-b2b.net/secure/ParceirosV3SSL.svc?wsdl
+    wsdl:
 
 stg:
   parceiros_v3:
-    wsdl: http://b2b-servico-casasbahia.stage-b2b.net/Parceirosv3.svc?wsdl=wsdl0
-    endpoint: http://b2b-servico-casasbahia.stage-b2b.net/Parceirosv3.svc
+    wsdl:
+    endpoint:
   parceiros_v3_ssl:
-    wsdl: https://b2b-servico-casasbahia.stage-b2b.net/secure/ParceirosV3SSL.svc?wsdl
+    wsdl:
 
 prd:
   parceiros_v3:
-    wsdl: http://b2b.casasbahia.com.br/Parceirosv3.svc?wsdl=wsdl0
-    endpoint: http://b2b.casasbahia.com.br/Parceirosv3.svc
+    wsdl:
+    endpoint:
   parceiros_v3_ssl:
-    wsdl: https://b2b.casasbahia.com.br/secure/Parceirosv3SSL.svc?wsdl
+    wsdl:
